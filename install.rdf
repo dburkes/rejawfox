@@ -1,29 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
- xmlns:em="http://www.mozilla.org/2004/em-rdf#">
-  <Description about="urn:mozilla:install-manifest">
-    <em:id>rejawfox@netable.com</em:id>
-    <em:name>RejawFox</em:name>
-    <em:version>0.6.7</em:version>
-    <em:creator>Kazuho Okui</em:creator>
-    <em:description>This extension notifies you when you receive new Shouts, Whisper, or Replies in your Rejaw inbox</em:description>
-    <em:homepageURL>http://github.com/dburkes/rejawfox</em:homepageURL>
-    <em:updateURL>http://s3.amazonaws.com/rejawfox/RejawFox.rdf</em:updateURL>
-    <em:iconURL>chrome://rejawfox/content/rejawfox.png</em:iconURL>
-    <em:optionsURL>chrome://rejawfox/content/login.xul</em:optionsURL>
-    <em:updateKey>
-      MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDO/JJ
-      +hmYqQ0+OZQUfOFRDLhBCW0N9L0dqupm8Zvlid4lRrE
-      PNTOEfaujd7eGBI0v7lRjX1d24pfpDK+Jw5LUBvyPzr
-      TgdXTgnuMXN0Knp7xkCgvF92Rh1nvLnV/7l/IUAmpyl
-      Y42XitHesD7FGKGET4AQ9TK/mjABWkfgaQlkOQIDAQAB
-    </em:updateKey>
-    <em:targetApplication>
-      <Description>
-        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- firefox -->
-        <em:minVersion>3.0</em:minVersion>
-        <em:maxVersion>3.*</em:maxVersion>
-      </Description>
-    </em:targetApplication>
-  </Description>
-</RDF>
+<?xml version="1.0"?>
+<RDF:RDF xmlns:em="http://www.mozilla.org/2004/em-rdf#"
+         xmlns:NC="http://home.netscape.com/NC-rdf#"
+         xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <RDF:Description RDF:about="urn:mozilla:install-manifest"
+                   em:id="rejawfox@netable.com"
+                   em:name="RejawFox"
+                   em:version="0.6.7"
+                   em:creator="Danny Burkes"
+                   em:description="This extension notifies you when you receive new Shouts, Whisper, or Replies in your Rejaw inbox"
+                   em:homepageURL="http://github.com/dburkes/rejawfox"
+                   em:updateURL="http://s3.amazonaws.com/rejawfox/RejawFox.rdf"
+                   em:iconURL="chrome://rejawfox/content/rejawfox.png"
+                   em:optionsURL="chrome://rejawfox/content/login.xul"
+                   em:updateKey="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCuPqsatfQoQc+GhP9vRyqdgJgVYXXHeTdArCBVD9nh53xBwXons4w+FxYw1hi1SPskp4w9HY4J7MLRw+9PDLMpG59BIc2QSGbxxnK+mOgL6FDVBoMAUWh9QPn7UiX6pzHx3UT2XlEa1Gb79EugTzCgTMYI+/2lgRKw9iS1aFqANQIDAQAB">
+    <em:targetApplication RDF:resource="rdf:#$9rcSE3"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="rdf:#$9rcSE3"
+                   em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
+                   em:minVersion="3.0"
+                   em:maxVersion="3.*" />
+</RDF:RDF>

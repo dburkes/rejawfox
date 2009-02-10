@@ -24,8 +24,7 @@ build: test
 test:
 	@perl ./tools/check_locale.pl
 
-copy: build
-	echo "hi"
+copy: 
 	s3cmd.rb put rejawfox:$(APP_NAME)-$(VERSION).xpi $(APP_NAME)-$(VERSION).xpi "x-amz-acl: public-read"
 	s3cmd.rb put rejawfox:$(APP_NAME).rdf $(APP_NAME).rdf "x-amz-acl: public-read"
 	echo "http://s3.amazonaws.com/rejawfox/$(APP_NAME)-$(VERSION).xpi"
