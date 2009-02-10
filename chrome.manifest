@@ -1,0 +1,3 @@
+content	rejawfox	content/
+overlay	chrome://browser/content/browser.xul	chrome://rejawfox/content/rejawfox.xul
+locale rejawfox en-US locale/en-US/

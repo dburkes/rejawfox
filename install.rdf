@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+ xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>rejawfox@naan.net</em:id>
+    <em:name>RejawFox</em:name>
+    <em:version>0.6.7</em:version>
+    <em:creator>Kazuho Okui</em:creator>
+    <em:description>This extension notifies you Rejaw statuses</em:description>
+    <em:homepageURL>http://naan.net/trac/wiki/RejawFox</em:homepageURL>
+    <em:updateURL>http://naan.net/rejaw/RejawFox.rdf</em:updateURL>
+    <em:iconURL>chrome://rejawfox/content/rejawfox.png</em:iconURL>
+    <em:optionsURL>chrome://rejawfox/content/login.xul</em:optionsURL>
+    <em:updateKey>
+      MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDO/JJ
+      +hmYqQ0+OZQUfOFRDLhBCW0N9L0dqupm8Zvlid4lRrE
+      PNTOEfaujd7eGBI0v7lRjX1d24pfpDK+Jw5LUBvyPzr
+      TgdXTgnuMXN0Knp7xkCgvF92Rh1nvLnV/7l/IUAmpyl
+      Y42XitHesD7FGKGET4AQ9TK/mjABWkfgaQlkOQIDAQAB
+    </em:updateKey>
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- firefox -->
+        <em:minVersion>3.0</em:minVersion>
+        <em:maxVersion>3.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+  </Description>
+</RDF>

@@ -1,0 +1,54 @@
+<?xml version="1.0"?> 
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://rejawfox/content/rejawfox.css" type="text/css"?>
+
+<!DOCTYPE dialog SYSTEM "chrome://rejawfox/locale/rejawfox.pref.dtd">
+
+<dialog xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        id="rejawfox-login"
+        onload="return RejawfoxLogin.onLoad();"
+	onunload="RejawfoxLogin.onUnload();"
+        ondialogaccept="return RejawfoxLogin.onSubmit();"
+	ondialogcancel="return RejawfoxLogin.onCancel();"
+        buttons="accept,cancel"
+        title="&rejawfox.title;" style="padding:0px;"
+        persist="screenX screenY">
+
+  <script type="application/x-javascript" src="chrome://rejawfox/content/utility.js"/>
+  <script type="application/x-javascript" src="chrome://rejawfox/content/login.js"/>
+
+  <stringbundle id="platformKeys" src="chrome://global-platform/locale/platformKeys.properties"/>
+  <stringbundle id="localeKeys" src="chrome://global/locale/keys.properties"/>
+  <stringbundle id="rejawfox-strings" src="chrome://rejawfox/locale/rejawfox.pref.properties"/> 
+
+  <groupbox flex="1">
+    <caption label="&rejawfox.account;"/>
+    <grid>
+      <columns>
+	<column />
+	<column flex="1"/>
+      </columns>
+
+      <rows>
+	<row>
+          <hbox align="center">
+            <label control="username" value="&rejawfox.username;"/>
+          </hbox>
+	  <hbox align="center">
+            <textbox flex="1" type="text" id="username" onchange="RejawfoxLogin.onChangeAccount(this)" tooltiptext="&rejawfox.username.tooltip;"/>
+	  </hbox>
+	</row>
+	<row>
+          <hbox align="center">
+            <label control="password" value="&rejawfox.password;"/>
+          </hbox>
+          <textbox flex="1" type="password" id="password" tooltiptext="&rejawfox.password.tooltip;"/>
+	</row>
+      </rows>
+    </grid>
+  </groupbox>
+
+</dialog>
+

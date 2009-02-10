@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay SYSTEM "chrome://rejawfox/locale/rejawfox.dtd">
+<bindings xmlns="http://www.mozilla.org/xbl"
+          xmlns:html="http://www.w3.org/1999/xhtml"
+          xmlns:xbl="http://www.mozilla.org/xbl"
+          xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <binding id="rejawfox-balloon">
+    <content>
+      <xul:hbox flex="1" class="rejawfox-balloon-hbox-container"
+		onclick="gRejawfox.onBalloonClick(event)"
+                onmouseover="gRejawfox.onMouseOverBalloon(event)"
+                onmouseout="gRejawfox.onMouseOutBalloon(event)">
+	<!-- user icon -->
+	<xul:vbox flex="1">
+	  <xul:stack>
+	    <xul:image class="rejawfox-balloon-usericon" align="top" 
+		       xbl:inherits="src=image_url, tooltiptext=username, userpage, unread" />
+	  </xul:stack>
+	  <xul:spacer flex="1" />
+	</xul:vbox>
+	<!-- messages -->
+	<xul:vbox class="rejawfox-balloon-messagebox" 
+		  xbl:inherits="tooltiptext=time, permalink">
+	  <xul:description class="rejawfox-balloon-user" 
+			   xbl:inherits="value=fullname,tooltiptext=time" />
+	  <xul:description class="rejawfox-balloon-message" xbl:inherits="tooltiptext=time">
+	    <children />
+	  </xul:description>
+	</xul:vbox>
+	<!-- function icons -->
+<!--
+	<xul:vbox style="margin-left: 2px" flex="1">
+	  <xul:image class="rejawfox-balloon-reply" 
+		     onclick="gRejawfox.onReply(this); return false;" 
+		     xbl:inherits="name=screen_name,attr"/>
+	</xul:vbox>
+-->
+
+      </xul:hbox>
+    </content>
+  </binding>
+
+</bindings>
+

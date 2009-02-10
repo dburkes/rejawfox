@@ -1,0 +1,100 @@
+/*
+ * Status bar button 
+ */
+#rejawfox-statusbar-button {
+  list-style-image: url("chrome://rejawfox/content/statusbar.png");
+  display: -moz-box;
+  -moz-image-region: rect(16px, 16px, 32px, 0px);
+  padding-top: 2px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+#rejawfox-statusbar-button[state="active"] { 
+  list-style-image: url("chrome://rejawfox/content/statusbar.png");
+  -moz-image-region: rect(32px, 16px, 48px, 0px);
+}
+
+#rejawfox-statusbar-button[state="idle"] { 
+  list-style-image: url("chrome://rejawfox/content/statusbar.png");
+  -moz-image-region: rect(48px, 16px, 64px, 0px);
+}
+
+#rejawfox-statusbar-button[state="error"] {
+  list-style-image: url("chrome://rejawfox/content/statusbar.png");
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+
+/*
+ * Panel look and feel
+ */
+#rejawfox-panel { 
+  border: none;
+}
+
+/*
+ * Popup look and feel
+ */
+.rejawfox-balloon {
+  -moz-binding: url("chrome://rejawfox/content/rejawfox.xml#rejawfox-balloon");
+  padding: 2px;
+  width: 258px;
+  margin-bottom: 1px;
+  background: #191919;
+  color: #b3b3b3;
+  margin-bottom: 0px;
+  -moz-border-radius: 0;
+  -moz-opacity: 0.95;
+}
+
+.rejawfox-balloon:hover { 
+  background: #383838;
+  -moz-opacity: 1;
+}
+
+.rejawfox-balloon-usericon {
+  width: 32px;
+  max-width: 32px;
+  max-height: 32px;
+  margin: 2px;
+  padding: 0px;
+  cursor: pointer;
+}
+
+.rejawfox-balloon-user {
+  color: #ffffa2;
+  font-weight: bold;
+}
+
+.rejawfox-balloon-messagebox { 
+  width: 200px;
+  max-width: 200px;
+  height: 16px;
+  max-height: 128px;
+  overflow: visible;
+  cursor: pointer;
+}
+
+.rejawfox-balloon-message {
+  margin: 1px;
+}
+
+/*
+   message body
+*/
+.rejawfox-message-body { 
+  padding: 0px;
+  margin: 0px;
+}
+
+.rejawfox-hyperlink { 
+  color: #6e9bcd;
+  display: -moz-inline-box;
+  display: inline-block;
+}
+
+.rejawfox-hyperlink:hover { 
+  text-decoration: underline;
+  cursor: pointer;
+}
+

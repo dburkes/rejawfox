@@ -1,0 +1,14 @@
+<!ENTITY rejawfox.title "RejawFox preferences">
+<!ENTITY rejawfox.account "Account">
+<!ENTITY rejawfox.username "Username">
+<!ENTITY rejawfox.username.tooltip "Enter your username.">
+<!ENTITY rejawfox.password "Password">
+<!ENTITY rejawfox.password.tooltip "Enter your Password. If you use OpenID, enter your second password.">
+<!ENTITY rejawfox.preferences "Preferences">
+<!ENTITY rejawfox.popupInterval "Popup interval">
+<!ENTITY rejawfox.popup3sec "3 seconds">
+<!ENTITY rejawfox.popup5sec "5 seconds">
+<!ENTITY rejawfox.popup7sec "7 seconds">
+<!ENTITY rejawfox.popup10sec "10 seconds">
+<!ENTITY rejawfox.balloon "Popup display">
+<!ENTITY rejawfox.showBalloon "Show balloon popup">
