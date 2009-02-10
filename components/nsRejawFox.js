@@ -36,7 +36,7 @@
 
 const CLASS_ID = Components.ID("e8fe4da0-651d-11dd-ad8b-0800200c9a66");
 const CLASS_NAME = "Rejawfox";
-const CONTRACT_ID = "@naan.studio/rejawfox;1";
+const CONTRACT_ID = "@dburkes/rejawfox;1";
 const NETWORK_TIMEOUT_TIME = 120;
 const ERROR_INTERVAL = 60;
 const OBSERVE_INTERVAL = 30;

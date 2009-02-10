@@ -5,7 +5,7 @@ XPIDL_INCLUDE=~/work/mozilla/obj-i386-apple-darwin9.4.0/dist/idl
 
 VERSION = $(shell cat install.rdf | perl ./tools/getver.pl)
 
-BUILD_FILES = $(APP_NAME)* .htaccess
+BUILD_FILES = $(APP_NAME)*
 
 all: build
 
@@ -17,7 +17,6 @@ components/%.xpt : components/%.idl
 build: test
 	find . -name ".DS_Store" -exec rm -f {} \;
 	sh ./build.sh
-	perl -p -e 's/\$$VERSION\$$/$(VERSION)/' htaccess > .htaccess
 
 	mv $(APP_NAME).xpi $(APP_NAME)-$(VERSION).xpi
 	perl ./tools/makehash.pl $(APP_NAME) $(VERSION)
@@ -25,16 +24,11 @@ build: test
 test:
 	@perl ./tools/check_locale.pl
 
-update:
-	@if grep 'signature' RejawFox.rdf; then  \
-		scp $(BUILD_FILES) www.naan.net:naan.net/www/rejaw/ ; \
-	else \
-		echo "No signed signature to RejawFox.rdf"; \
-	fi;
-
 copy: build
-	scp $(APP_NAME)-$(VERSION).xpi www.naan.net:naan.net/www/rejaw/
-	echo "http://naan.net/rejaw/$(APP_NAME)-$(VERSION).xpi"
+	echo "hi"
+	s3cmd.rb put rejawfox:$(APP_NAME)-$(VERSION).xpi $(APP_NAME)-$(VERSION).xpi "x-amz-acl: public-read"
+	s3cmd.rb put rejawfox:$(APP_NAME).rdf $(APP_NAME).rdf "x-amz-acl: public-read"
+	echo "http://s3.amazonaws.com/rejawfox/$(APP_NAME)-$(VERSION).xpi"
 
 clean:
 	find . -name ".DS_Store" -exec rm -f {} \;
