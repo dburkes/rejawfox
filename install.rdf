@@ -5,7 +5,7 @@
   <RDF:Description RDF:about="urn:mozilla:install-manifest"
                    em:id="rejawfox@netable.com"
                    em:name="RejawFox"
-                   em:version="0.6.7"
+                   em:version="0.6.7.1"
                    em:creator="Danny Burkes"
                    em:description="This extension notifies you when you receive new Shouts, Whisper, or Replies in your Rejaw inbox"
                    em:homepageURL="http://github.com/dburkes/rejawfox"
