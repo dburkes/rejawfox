@@ -8,15 +8,13 @@
                    em:version="0.6.7.1"
                    em:creator="Danny Burkes"
                    em:description="This extension notifies you when you receive new Shouts, Whisper, or Replies in your Rejaw inbox"
-                   em:homepageURL="http://github.com/dburkes/rejawfox"
-                   em:updateURL="http://s3.amazonaws.com/rejawfox/RejawFox.rdf"
+                   em:homepageURL="http://rejaw.com/room/rejawfox"
                    em:iconURL="chrome://rejawfox/content/rejawfox.png"
-                   em:optionsURL="chrome://rejawfox/content/login.xul"
-                   em:updateKey="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCuPqsatfQoQc+GhP9vRyqdgJgVYXXHeTdArCBVD9nh53xBwXons4w+FxYw1hi1SPskp4w9HY4J7MLRw+9PDLMpG59BIc2QSGbxxnK+mOgL6FDVBoMAUWh9QPn7UiX6pzHx3UT2XlEa1Gb79EugTzCgTMYI+/2lgRKw9iS1aFqANQIDAQAB">
+                   em:optionsURL="chrome://rejawfox/content/login.xul">
     <em:targetApplication RDF:resource="rdf:#$9rcSE3"/>
   </RDF:Description>
   <RDF:Description RDF:about="rdf:#$9rcSE3"
                    em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
                    em:minVersion="3.0"
-                   em:maxVersion="3.*" />
+                   em:maxVersion="3.0.*" />
 </RDF:RDF>
