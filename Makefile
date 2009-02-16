@@ -24,11 +24,6 @@ build: test
 test:
 	@perl ./tools/check_locale.pl
 
-copy: 
-	s3cmd.rb put rejawfox:$(APP_NAME)-$(VERSION).xpi $(APP_NAME)-$(VERSION).xpi "x-amz-acl: public-read"
-	s3cmd.rb put rejawfox:$(APP_NAME).rdf $(APP_NAME).rdf "x-amz-acl: public-read"
-	@echo "http://s3.amazonaws.com/rejawfox/$(APP_NAME)-$(VERSION).xpi"
-
 clean:
 	find . -name ".DS_Store" -exec rm -f {} \;
 	rm -f $(BUILD_FILES)
